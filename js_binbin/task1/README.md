@@ -1,4 +1,4 @@
-## 任务一：零基础JavaScript编码（一）
+# 任务一：零基础JavaScript编码（一）
 [code](https://github.com/Coder-Min/BaiduIFE/blob/master/js_binbin/task1/task1.html)<br>
 [demo](https://coder-min.github.io/BaiduIFE/js_binbin/task1/task1.html)
 ## 任务目的
