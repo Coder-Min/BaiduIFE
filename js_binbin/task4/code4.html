@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<style>
+	li {
+		display: inline-block;
+		display:inline;  /*ie6~7 bug*/
+		height: 40px;
+		padding: 5px;
+		margin: 0 10px;
+		font: 16px/40px Arial;
+		background: #ccc;
+		cursor: pointer;
+	}
+</style>
+<body>
+	<input type="text" id="No_in" name="">
+	<input type="button" id="btn_left_in" value="左侧入">
+	<input type="button" id="btn_right_in" value="右侧入">
+	<input type="button" id="btn_left_out" value="左侧出">
+	<input type="button" id="btn_right_out" value="右侧出">
+	<ul id="No_out">
+		
+	</ul>
+</body>
+<script type="text/javascript">
+	//变量绑定
+	var oNo_in=document.getElementById('No_in');
+	var oNo_out=document.getElementById('No_out');
+	var oBtn_left_in=document.getElementById('btn_left_in');
+	var oBtn_right_in=document.getElementById('btn_right_in');
+	var oBtn_left_out=document.getElementById('btn_left_out');
+	var oBtn_right_out=document.getElementById('btn_right_out');
+	var oLilist=oNo_out.getElementsByTagName('li');
+
+	function insertnum(direction){
+		if(oNo_in.value==""){					//未输入
+			alert("请输入数字后继续");			//弹出请输入
+			oNo_in.focus();						//input获得焦点
+		}
+		else if (isNaN(oNo_in.value)){						//如果输入值非数字
+			alert("您输入的不是数字，请输入数字后继续");	//弹窗显示重新输入
+			oNo_in.value="";								//清空input
+			oNo_in.focus();									//input获得焦点
+		}
+		else{
+			var oLi=document.createElement('li');
+			oLi.innerHTML=oNo_in.value;
+			if(direction=="left"){									//当插入方向为从左插入
+				oNo_out.insertBefore(oLi,oNo_out.firstChild);		//插入父元素第一个子元素前
+			}
+			else if (direction=="rigth"){							//当插入方向为从右插入
+				oNo_out.appendChild(oLi);							//插入父元素子元素末尾
+			}
+		}
+
+	}
+
+	/*function getFirst(elem){
+		for(var i=0,e;e=elem.childNodes[i++];){
+			if(e.nodetype==1){
+				return e;
+			}
+		}
+	}*/
+
+	function deletenum(direction){
+		if(oLilist.length==0){
+			alert("没有元素能删除");
+			return false;
+		}else {
+			if(direction=="left"){
+				if(confirm("该值为"+oLilist[0].innerHTML+"确定要删除？")){
+					oNo_out.removeChild(oNo_out.childNodes[0]);
+			}
+				else {
+					alert("您取消了删除。");
+				}
+			} else if (direction=="right"){
+				var index=oLilist.length-1
+				if(confirm("该值为"+oLilist[index].innerHTML+"确定要删除？")){
+					oNo_out.removeChild(oNo_out.childNodes[index]);
+				}
+				else {
+					alert("您取消了删除。");
+				}
+			} 
+		}
+	}
+
+	
+	oBtn_left_in.onclick=function(){
+		insertnum("left");
+	};
+	oBtn_right_in.onclick=function(){
+		insertnum("rigth");
+	};
+	oBtn_left_out.onclick=function(){
+		deletenum("left");
+	};
+	oBtn_right_out.onclick=function(){
+		deletenum("right");
+	};
+	if(document.addEventListener){
+		oNo_out.addEventListener("click",function(e){
+			if(event.target.nodeName.toLowerCase()=="li"){
+    			oNo_out.removeChild(event.target);
+			}
+		})
+	}
+	else  {
+		oNo_out.attachEvent("onclick",function(e){
+			if(event.srcElement.nodeName.toLowerCase()=="li"){
+    			oNo_out.removeChild(event.srcElement);
+			}
+		})
+	}
+	
+
+
+
+
+</script>
+</html>
