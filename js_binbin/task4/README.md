@@ -1,6 +1,6 @@
 # 任务四：基础JavaScript练习（一）
-[code](https://github.com/Coder-Min/BaiduIFE/blob/master/task4/code4.html)<br>
-[demo](https://coder-min.github.io/BaiduIFE/task4/code4.html)
+[code](https://github.com/Coder-Min/BaiduIFE/blob/master/js_binbin/task4/task4.html)<br>
+[demo](https://coder-min.github.io/BaiduIFE/js_binbin/task4/task4.html)
 ## 任务目的
 - 学习与实践JavaScript的基本语法、语言特性
 - 初步了解JavaScript的事件是什么

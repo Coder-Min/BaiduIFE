@@ -1,6 +1,6 @@
 ## 任务一：零基础JavaScript编码（一）
-[code](https://github.com/Coder-Min/BaiduIFE/blob/master/task1/%E9%9B%B6%E5%9F%BA%E7%A1%80JavaScript%E7%BC%96%E7%A0%81%EF%BC%88%E4%B8%80%EF%BC%89.html)<br>
-[demo](https://coder-min.github.io/BaiduIFE/task1/%E9%9B%B6%E5%9F%BA%E7%A1%80JavaScript%E7%BC%96%E7%A0%81%EF%BC%88%E4%B8%80%EF%BC%89.html)
+[code](https://github.com/Coder-Min/BaiduIFE/blob/master/js_binbin/task1/task1.html)<br>
+[demo](https://coder-min.github.io/BaiduIFE/js_binbin/task1/task1.html)
 ## 任务目的
 - JavaScript初体验
 - 初步明白JavaScript的简单基本语法，如变量、函数

@@ -1,6 +1,6 @@
 # 任务二：零基础JavaScript编码（二）
-[code](https://github.com/Coder-Min/BaiduIFE/blob/master/task2/%E9%9B%B6%E5%9F%BA%E7%A1%80JavaScript%E7%BC%96%E7%A0%81%EF%BC%88%E4%BA%8C%EF%BC%89.html)<br>
-[demo](https://coder-min.github.io/BaiduIFE/task2/%E9%9B%B6%E5%9F%BA%E7%A1%80JavaScript%E7%BC%96%E7%A0%81%EF%BC%88%E4%BA%8C%EF%BC%89.html)
+[code](https://github.com/Coder-Min/BaiduIFE/blob/master/js_binbin/task2/task2.html)<br>
+[demo](https://coder-min.github.io/BaiduIFE/js_binbin/task2/task2.html)
 ## 任务目的
 - 在上一任务基础上继续JavaScript的体验
 - 学习JavaScript中的if判断语法，for循环语法
